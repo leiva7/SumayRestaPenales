@@ -1,0 +1,18 @@
+Lo primero que se debe hacer es instalar el paquete de virtualenv (pip install virtualenv) el cual es el que nos va a permitir crear los entornos virtuales, este se instalará de forma global. Para verificar que se instaló correctamente podemos ejecutar which virtualenv.
+
+Una vez instalado el virtualenv debemos crear o seleccionar la carpeta en donde tendremos nuestro entorno virtual, estando ahí ejecutamos el siguiente para crear el entorno virtual: **virtualenv name_env ** por convención es recomendable llamarlo venv.
+
+Después de crear el entorno virtual debemos activarlo, para ello se ejecuta name_env\Scripts\activate
+
+con esto quedará activado y nos aparecerá el nombre del entorno virtual al inicio de la línea en la terminal de comandos, (venv en este caso). Para desactivarlo sería lo mismo pero al final se coloca desactivate.
+
+Para ver los paquetes que tenemos instalados en nuestro entorno virtual ejecutamos el siguiente comando: pip freeze. Esto nos mostrará el listado de los paquetes, si no aparece nada es porque no se ha instalado ningún paquete aún.
+
+Si queremos tener todos los paquetes agrupados y con su versión correspondiente, podemos hacer uso del archivo requirements.txt en donde colocaremos cada uno de los paquetes y que luego podremos instalar usando el siguiente comando: pip install -r requirements.txt
+
+Para empaquetar con pyinstaller hay que hacerlo desde el virtual env activo, y primero instalar el propio pyinstaller (pip pyinstaller) en el virtual env para que empaquete los módulos que están instalados en el virtualenv
+    pyinstaller -i "icono.ico" --onefile nombre.py     (estando en la consola con el env activado)
+
+
+Nombre del virtualenv en esta carpeta:
+sumayresta
